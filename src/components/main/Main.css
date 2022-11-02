@@ -1,0 +1,29 @@
+.main {
+  width: 100%;
+  overflow-y: scroll;
+  /* position: relative; */
+  padding-top: 3rem;
+  /* position: relative; */
+  /* display: flex; */
+}
+
+.upperNav {
+  position: fixed;
+  background-color: var(--color-navgray);
+  width: 100%;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  color: white;
+  padding: 0.5rem 2rem;
+  top: 0;
+}
+
+.mainContent {
+  color: white;
+  padding: 0.5rem 2rem;
+  /* display: flex; */
+}
+.mainContent h1 {
+  font-size: 1.5rem;
+}

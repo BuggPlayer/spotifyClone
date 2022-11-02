@@ -1,0 +1,43 @@
+.navBar {
+  background: var(--color-darkGray);
+  width: 220px;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.logo {
+  color: white;
+  padding: 1rem 0.8rem;
+  max-width: 130px;
+}
+ul li {
+  color: gray;
+  border-radius: 5px;
+  /* border: 1px solid red; */
+  padding: 0.5rem 0.8rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+}
+ul li:hover {
+  color: white;
+}
+ul li.active {
+  background-color: var(--color-lightergray);
+}
+ul li svg {
+margin-right: 20px;
+}
+.cookies {
+  margin-top: auto;
+  font-size: 0.6rem;
+  text-align: center;
+  color: var(--color-grayText);
+}
+
+.cookies span {
+  display: block;
+}
