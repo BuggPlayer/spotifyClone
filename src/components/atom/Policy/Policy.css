@@ -1,0 +1,10 @@
+.cookies {
+  margin-top: auto;
+  font-size: 0.6rem;
+  text-align: center;
+  color: var(--color-grayText);
+}
+
+.cookies span {
+  display: block;
+}

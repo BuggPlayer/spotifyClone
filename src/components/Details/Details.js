@@ -2,6 +2,7 @@ import React from "react";
 
 import PlayCircleFilledIcon from "@mui/icons-material/PlayCircleFilled";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import { useLocation } from "react-router-dom";
 
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 
@@ -9,13 +10,13 @@ import "./Details.css";
 import Showrow from "../Showrow/Showrow";
 
 const Details = () => {
+  const location = useLocation();
+  console.log("tran", location.state);
+
   return (
     <div className="body">
       <div className="body__info">
-        <img
-          src="https://images.unsplash.com/photo-1659535844436-64344882b939?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80"
-          alt=""
-        />
+        <img src={location.state.image} alt="" />
         <div className="body__infoText">
           <strong>PLAYLIST</strong>
           <h2>Discover Weekly</h2>

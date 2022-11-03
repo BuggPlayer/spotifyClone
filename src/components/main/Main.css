@@ -1,23 +1,12 @@
 .main {
   width: 100%;
-  overflow-y: scroll;
+  overflow: scroll;
   /* position: relative; */
   padding-top: 3rem;
   /* position: relative; */
   /* display: flex; */
 }
 
-.upperNav {
-  position: fixed;
-  background-color: var(--color-navgray);
-  width: 90%;
-  height: 56px;
-  overflow: hidden;
-
-  color: white;
-  padding: 0.5rem 2rem;
-  top: 0;
-}
 .upperNav__right {
   /* background-color: red; */
   display: flex;
@@ -25,11 +14,7 @@
   justify-content: flex-end;
   /* width: 90%; */
 }
-.mainContent {
-  color: white;
-  padding: 0.5rem 2rem;
-  /* display: flex; */
-}
+
 .mainContent h1 {
   font-size: 1.5rem;
 }

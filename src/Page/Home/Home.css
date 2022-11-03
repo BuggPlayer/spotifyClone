@@ -1,0 +1,28 @@
+.HomeWrap {
+    /* background-color: var(--color-darkGray); */
+    background-color: gray;
+    /* height: 100vh; */
+    min-height: 100%;
+  }
+
+
+  
+.Home {
+    height: calc(100vh - 70px);
+    background-color: var(--color-lightgray);
+    display: flex;
+  }
+  
+  /* .musicControl {
+    background-color: var(--color-lightergray);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+    color: white;
+    z-index: 2;
+    position: relative;
+    border-top: 1px solid var(--color-darkGray);
+  }
+   */

@@ -1,14 +1,15 @@
 import React, { useState } from "react";
-import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
-import SkipPreviousIcon from '@mui/icons-material/SkipPrevious';
-import SkipNextIcon from '@mui/icons-material/SkipNext';
-import ShuffleIcon from '@mui/icons-material/Shuffle';
-import RepeatIcon from '@mui/icons-material/Repeat';
-import VolumeDownIcon from '@mui/icons-material/VolumeDown';
-import PauseCircleOutlineIcon from '@mui/icons-material/PauseCircleOutline';
-import PlaylistPlayIcon from '@mui/icons-material/PlaylistPlay';
+import PlayCircleOutlineIcon from "@mui/icons-material/PlayCircleOutline";
+import SkipPreviousIcon from "@mui/icons-material/SkipPrevious";
+import SkipNextIcon from "@mui/icons-material/SkipNext";
+import ShuffleIcon from "@mui/icons-material/Shuffle";
+import RepeatIcon from "@mui/icons-material/Repeat";
+import VolumeDownIcon from "@mui/icons-material/VolumeDown";
+
+import PlaylistPlayIcon from "@mui/icons-material/PlaylistPlay";
 import { Grid, Slider } from "@mui/material";
 import "./Footer.css";
+import Playbutton from "../atom/Playbutton/Playbutton";
 
 const Footer = () => {
   const [playing, setPlaying] = useState(true);
@@ -33,11 +34,7 @@ const Footer = () => {
         <ShuffleIcon className="footer__green" />
         <SkipPreviousIcon onClick={{}} className="footer__icon" />
         {playing ? (
-          <PauseCircleOutlineIcon
-            onClick={{}}
-            fontSize="large"
-            className="footer__icon"
-          />
+          <Playbutton />
         ) : (
           <PlayCircleOutlineIcon
             onClick={{}}

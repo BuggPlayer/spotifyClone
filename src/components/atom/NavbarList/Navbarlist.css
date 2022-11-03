@@ -1,0 +1,21 @@
+ul li {
+  color: gray;
+  border-radius: 5px;
+  /* border: 1px solid red; */
+  padding: 0.5rem 0.8rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+}
+ul li:hover {
+  color: white;
+}
+ul li.active {
+  background-color: var(--color-lightergray);
+  color: white;
+}
+ul li svg {
+  margin-right: 20px;
+}

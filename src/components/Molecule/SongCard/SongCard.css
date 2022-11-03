@@ -1,0 +1,11 @@
+.SongCardContent {
+  color: white;
+  padding: 0.5rem 2rem;
+}
+
+.SongCardContent h2 {
+  padding: 0.7rem 0 1rem 0;
+}
+.SongCardChild {
+  display: flex;
+}

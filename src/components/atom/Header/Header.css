@@ -1,0 +1,13 @@
+.header {
+  /* background-color: red; */
+  position: fixed;
+  background-color: var(--color-lightgray);
+  width: 85%;
+  height: 60px;
+  overflow: hidden;
+  display: flex;
+  justify-content: end;
+  color: white;
+  padding: 0.5rem 2rem;
+  top: 0;
+}
