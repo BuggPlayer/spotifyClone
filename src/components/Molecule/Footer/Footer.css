@@ -1,0 +1,15 @@
+.footer {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: var(--color-lightergray);
+  bottom: 0;
+}
+
+
+
+
+
+

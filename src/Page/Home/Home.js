@@ -1,5 +1,7 @@
 import React from "react";
-import Main from "../../components/main/Main";
+
+import Main from "../../components/Molecule/main/Main";
+import Footer from "../../components/Molecule/Footer/Footer";
 import NavBar from "../../components/NavBar/NavBar";
 import "./Home.css";
 const Home = () => {
@@ -9,6 +11,7 @@ const Home = () => {
         <NavBar />
         <Main />
       </div>
+      <Footer/>
     </div>
   );
 };

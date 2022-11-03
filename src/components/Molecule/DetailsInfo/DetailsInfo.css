@@ -1,0 +1,13 @@
+.details__infoText {
+    flex: 1;
+  }
+  
+  .details__infoText > h2 {
+    font-size: 48px;
+    margin-bottom: 10px;
+  }
+  
+  .details__infoText > p {
+    font-size: 14px;
+  }
+  

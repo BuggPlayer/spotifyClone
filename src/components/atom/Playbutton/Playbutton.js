@@ -1,12 +1,12 @@
 import React from "react";
-import PauseCircleOutlineIcon from "@mui/icons-material/PauseCircleOutline";
+import PlayCircleOutlineIcon from "@mui/icons-material/PlayCircleOutline";
 import "./Playbutton.css";
-const Playbutton = () => {
+const Playbutton = ({onClick , className}) => {
   return (
-    <PauseCircleOutlineIcon
-      onClick={{}}
+    <PlayCircleOutlineIcon
+      onClick={onClick}
       fontSize="large"
-      className="play__icon"
+      className={className}
     />
   );
 };

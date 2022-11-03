@@ -12,15 +12,6 @@ const SongCard = ({ item }) => {
         <div className="SongCardChild">
           <Card item={item} />
         </div>
-
-        {/* <div className="SongCardChild">
-          {item?.song?.map((item) => {
-            console.log("itemclick", item);
-            return (
-              <Card      key={item.id} setsingleData={setsingleData} item={item} />
-            );
-          })}
-        </div> */}
       </div>
     </>
   );
