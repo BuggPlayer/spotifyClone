@@ -30,11 +30,11 @@ img {
 .outerWrap {
   /* background-color: var(--color-darkGray); */
   background-color: gray;
-  height: 100vh;
-  min-height: 100%;
+  /* height: 100vh; */
+  /* min-height: 100%; */
 }
 .app {
-  height: calc(100vh - 90px);
+  height: calc(100vh - 80px);
   background-color: var(--color-lightgray);
   display: flex;
 }
@@ -49,4 +49,5 @@ img {
   color: white;
   z-index: 2;
   position: relative;
+  border-top: 1px solid var(--color-darkGray);
 }

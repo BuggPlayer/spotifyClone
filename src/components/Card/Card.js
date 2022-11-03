@@ -3,8 +3,10 @@ import "./Card.css";
 
 const Card = ({ data }) => {
   return (
-    <div className="cardsWrap">
- 
+    <div
+      className="cardsWrap"
+      onClick={() => (window.location.pathname = "/about")}
+    >
       <div className="card">
         <div className="cardImage">
           <img
@@ -14,11 +16,10 @@ const Card = ({ data }) => {
         </div>
 
         <div className="cardContent">
-          <h3>Likes songs</h3>
-          <p style={{ fontSize: 12, marginTop: 10, letterSpacing: 0.6 }}>
-            {" "}
+          <h3 style={{ marginBottom: 4 }}>Likes songs</h3>
+          <span className="subText">
             Relax and indulge with <br /> beautiful piano pieces
-          </p>
+          </span>
         </div>
 
         <span className="playIcon">

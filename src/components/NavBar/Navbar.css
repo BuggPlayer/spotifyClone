@@ -27,9 +27,10 @@ ul li:hover {
 }
 ul li.active {
   background-color: var(--color-lightergray);
+  color: white;
 }
 ul li svg {
-margin-right: 20px;
+  margin-right: 20px;
 }
 .cookies {
   margin-top: auto;

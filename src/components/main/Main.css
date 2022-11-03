@@ -10,15 +10,21 @@
 .upperNav {
   position: fixed;
   background-color: var(--color-navgray);
-  width: 100%;
+  width: 90%;
   height: 56px;
-  display: flex;
-  align-items: center;
+  overflow: hidden;
+
   color: white;
   padding: 0.5rem 2rem;
   top: 0;
 }
-
+.upperNav__right {
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  /* width: 90%; */
+}
 .mainContent {
   color: white;
   padding: 0.5rem 2rem;

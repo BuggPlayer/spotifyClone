@@ -1,8 +1,9 @@
 .cardsWrap {
   padding: 1.1rem;
+  display: flex;
+  flex-wrap: wrap;
 }
 .card {
-    
   /* position: relative; */
   background-color: var(--color-lightergray);
   border-radius: 10px;
@@ -48,4 +49,10 @@
 
 .card .playIcon:hover {
   display: 1;
+}
+
+.subText {
+  margin-top: 4px;
+  font-size: 0.8rem;
+  color: var(--color-grayText);
 }
