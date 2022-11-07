@@ -1,11 +1,11 @@
 import React from "react";
 
 import "./SmallImagecard.css";
-const SmallImageCard = ({location , item}) => {
+const SmallImageCard = ({img}) => {
   return (
     <img
       className="albumLogo"
-      src={location?.state?.image ?? item?.image}
+      src={img ?? ""}
       alt="No Image"
     />
   );

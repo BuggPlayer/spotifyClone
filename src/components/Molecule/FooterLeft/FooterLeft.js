@@ -1,21 +1,30 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useDataLayerValue } from "../../../Context/DataLayer";
 import SmallImageCard from "../../atom/SmallImageCard/SmallImageCard";
 import SongInfo from "../../atom/songInfo/SongInfo";
 
 import "./FooterLeft.css";
-const FooterLeft = ({ location }) => {
-  const [{ item ,discover_weekly}, dispatch] = useDataLayerValue();
-  console.log("item", item);
+const FooterLeft = () => {
+  const [{ itemId, discover_weekly, item }, dispatch] = useDataLayerValue();
+  console.log("id", itemId);
+  useEffect(() => {
+    
+    const idcheck = discover_weekly?.tracks?.items?.map((f) => f.track);
+    const singleItem = idcheck?.filter((f) => f.id == itemId);
+    console.log("singleItem", singleItem);
+    dispatch({ type: "SET_ITEM", payload: singleItem });
+  }, [itemId]);
 
-    console.log("discover_weekly" ,discover_weekly);
- const idcheck= discover_weekly?.tracks?.items?.map((f)=> f.track);
- const filtrt= idcheck.filter((f)=>f.id ===item)
- console.log("d " ,filtrt);
   return (
     <div className="footer__left">
-      <SmallImageCard location={location} />
-      <SongInfo location={location} />
+      {item ? (
+        <>
+          <SmallImageCard img={item[0]?.album?.images[0]?.url || ""} />
+          <SongInfo data={item[0]?.artists[0]?.name || ""} />
+        </>
+      ) : (
+        <h4>Loaging...</h4>
+      )}
     </div>
   );
 };

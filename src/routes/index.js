@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Details from "../Page/Details/Details";
 import Home from "../Page/Home/Home";
 
-const index = ({spotify}) => {
+const index = ({spoify}) => {
   return (
     <Router>
       <Routes>

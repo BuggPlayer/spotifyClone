@@ -8,25 +8,32 @@ import Playbutton from "../Playbutton/Playbutton";
 import "./Card.css";
 
 const Card = ({ Cardtrack }) => {
-  const [{ playing, item }, dispatch] = useDataLayerValue();
-  console.log("item", item);
   const navigate = useNavigate();
+  const [{ playing }, dispatch] = useDataLayerValue();
 
-  const playhandler = (data) => {
-    console.log("hell", Cardtrack.id);
+
+
+  const playhandler = () => {
+    // console.log("hell", Cardtrack.id);
     dispatch({ type: "SET_PLAYING", payload: true });
-    dispatch({ type: "SET_ITEM", payload: Cardtrack.id });
+    dispatch({ type: "SET_ITEM_ID", payload: Cardtrack.id });
+    
   };
 
   const pauseHandler = (id) => {
     dispatch({ type: "SET_PLAYING", payload: false });
   };
+
+  const navigateTodetial = () => {
+    dispatch({ type: "SET_ITEM_ID", payload: Cardtrack.id });
+    navigate("/details")
+  };
   return (
-    <div style={{ backgroundColor: "rebeccapurple" }} className="cardsWrap">
+    <div className="cardsWrap">
       <div className="card">
         <CardImage
           img={Cardtrack.album.images[0].url}
-          onclick={() => console.log("try")}
+          onclick={navigateTodetial}
         />
         <CardContent artics={Cardtrack} />
       </div>

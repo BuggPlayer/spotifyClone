@@ -1,17 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import Card from "../../atom/Card/Card";
 import "./SongCard.css";
-const SongCard = ({ track, idhandller }) => {
-
-  // const handler = () => {
-  //   console.log("ggg");
-  // };
+const SongCard = ({ track }) => {
   return (
     <>
       <div className="SongCardContent">
         <h2>{track?.album?.name}</h2>
         <div className="SongCardChild">
-          <Card  Cardtrack={track}  />
+          <Card Cardtrack={track} />
         </div>
       </div>
     </>
