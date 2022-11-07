@@ -10,4 +10,11 @@
   color: white;
   padding: 0.5rem 2rem;
   top: 0;
+  /* margin: 10px; */
+  flex-wrap: wrap;
+}
+
+.header h4{
+  text-align: center;
+  margin-left: 1rem;
 }

@@ -1,13 +1,9 @@
 import React from "react";
 import "./CardContent.css";
-const CardContent = ({item}) => {
+const CardContent = ({ artics }) => {
   return (
     <div className="cardContent">
-      <h3 >{item.songName}</h3>
-      <span className="subText">
-        {item.artisName}
-        <br />
-      </span>
+      <h3>{artics.name}</h3>
     </div>
   );
 };

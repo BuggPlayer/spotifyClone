@@ -9,7 +9,7 @@ const Home = () => {
     <div className="HomeWrap">
       <div className="Home">
         <NavBar />
-        <Main />
+        <Main  /> 
       </div>
       <Footer/>
     </div>

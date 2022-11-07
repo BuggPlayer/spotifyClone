@@ -1,10 +1,11 @@
 import React from "react";
-import "./CardImage.css"
+import "./CardImage.css";
 
-const CardImage = ({item ,onclick}) => {
+const CardImage = ({ img, onclick }) => {
+
   return (
     <div className="cardImage">
-      <img onClick={onclick}  src={item.image} alt="pic1" />
+      <img onClick={onclick} src={img} alt="pic1" />
     </div>
   );
 };

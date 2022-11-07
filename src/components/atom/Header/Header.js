@@ -1,13 +1,14 @@
 import React from "react";
 import { Avatar } from "@mui/material";
 import "./Header.css";
+import { useDataLayerValue } from "../../../Context/DataLayer";
 const Header = () => {
+  const [{ user }, dispatch] = useDataLayerValue();
+  // console.log("user", user.user.display_name);
   return (
     <div className="header">
-      <Avatar
-        alt="alt"
-        src="https://images.unsplash.com/photo-1659535844436-64344882b939?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80"
-      />
+      <Avatar alt={user?.display_name??""} src={user?.images[0]?.url??""} />
+      <h4>{user?.display_name }</h4>
     </div>
   );
 };
