@@ -20,13 +20,13 @@ const reducer = (state, action) => {
     case "SET_PLAYING":
       return {
         ...state,
-        playing: action.playing,
+        playing: action.payload,
       };
 
     case "SET_ITEM":
       return {
         ...state,
-        item: action.item,
+        item: action.payload,
       };
 
     case "SET_DISCOVER_WEEKLY":

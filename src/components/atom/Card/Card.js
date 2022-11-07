@@ -1,6 +1,6 @@
-import React, { useContext } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
-import { ToggleContext } from "../../../Context/ToggleContext";
+import { useDataLayerValue } from "../../../Context/DataLayer";
 import CardContent from "../CardContent/CardContent";
 import CardImage from "../cardImage/CardImage";
 import Pausebutton from "../pausebutton/Pausebutton";
@@ -8,31 +8,33 @@ import Playbutton from "../Playbutton/Playbutton";
 import "./Card.css";
 
 const Card = ({ Cardtrack }) => {
+  const [{ playing, item }, dispatch] = useDataLayerValue();
+  console.log("item", item);
   const navigate = useNavigate();
 
-  //context
-  const { Play, setPlay } = useContext(ToggleContext);
-
-  //details page
-  const Navpage = (data) => {
-    navigate("/details", { state: data });
+  const playhandler = (data) => {
+    console.log("hell", Cardtrack.id);
+    dispatch({ type: "SET_PLAYING", payload: true });
+    dispatch({ type: "SET_ITEM", payload: Cardtrack.id });
   };
 
-  const playhandler = (data) => {
-    navigate("/", { state: data });
-    setPlay((pre) => !pre);
+  const pauseHandler = (id) => {
+    dispatch({ type: "SET_PLAYING", payload: false });
   };
   return (
-    <div className="cardsWrap">
+    <div style={{ backgroundColor: "rebeccapurple" }} className="cardsWrap">
       <div className="card">
-        <CardImage img={Cardtrack.album.images[0].url} />
+        <CardImage
+          img={Cardtrack.album.images[0].url}
+          onclick={() => console.log("try")}
+        />
         <CardContent artics={Cardtrack} />
       </div>
       <div className="playbtnfixed">
-        {Play ? (
-          <Playbutton onClick={() => playhandler()} />
+        {playing ? (
+          <Pausebutton onClick={() => pauseHandler()} />
         ) : (
-          <Pausebutton onClick={() => playhandler()} />
+          <Playbutton onClick={playhandler} />
         )}
       </div>
     </div>

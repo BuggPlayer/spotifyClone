@@ -7,13 +7,20 @@ import SongCard from "../SongCard/SongCard";
 import "./Main.css";
 const Main = () => {
   const [{ discover_weekly }, dispatch] = useDataLayerValue();
-  // console.log("discover_weekly",discover_weekly);
+  
   return (
     <div className="main">
       <Header />
-      {discover_weekly?.tracks?.items?.map((item) => (
-        <SongCard track={item.track} />
-      ))}
+      {discover_weekly?.tracks?.items?.map((item) => {
+
+        return (
+          <SongCard
+            key={Math.random()}
+            track={item.track}
+       
+          />
+        );
+      })}
     </div>
   );
 };
