@@ -39,7 +39,7 @@ const Card = ({ Cardtrack }) => {
       </div>
       <div className="playbtnfixed">
         {playing ? (
-          <Pausebutton onClick={() => pauseHandler()} />
+          <Pausebutton onClick={pauseHandler} />
         ) : (
           <Playbutton onClick={playhandler} />
         )}

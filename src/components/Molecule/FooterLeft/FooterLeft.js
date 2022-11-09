@@ -6,12 +6,12 @@ import SongInfo from "../../atom/songInfo/SongInfo";
 import "./FooterLeft.css";
 const FooterLeft = () => {
   const [{ itemId, discover_weekly, item }, dispatch] = useDataLayerValue();
-  console.log("id", itemId);
+
   useEffect(() => {
     
     const idcheck = discover_weekly?.tracks?.items?.map((f) => f.track);
     const singleItem = idcheck?.filter((f) => f.id == itemId);
-    console.log("singleItem", singleItem);
+
     dispatch({ type: "SET_ITEM", payload: singleItem });
   }, [itemId]);
 
